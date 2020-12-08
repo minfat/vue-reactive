@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>差值表达式</h1>
+        <h3>{{msg}}</h3>
+        <h3>{{coutn}}</h3>
+        <h1>v-test</h1>
+        <div v-test="msg"></div>
+        <h1>v-model</h1>
+        <input type="text" v-model="msg">  
+        <input type="text" v-model="count"> 
+    </div>
+</body>
+</html>
+<script src="./js/Observer.js"></script>
+<script src="./js/vue.js"></script>
+<script>
+    let vm = new Vue({
+        el:'#app',
+        data:{
+            msg:'hello Vue',
+            count:100,
+            preson:{
+                name:'ydd'
+            }
+        }
+    })
+    console.log(vm.msg)
+</script>

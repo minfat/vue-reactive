@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发布订阅模式</title>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+</body>
+</html>
+<script>
+    //我们假定，存在一个’信息中心‘,某个任务执行完成，就向信号中心“发布”(publish)一个信息，其他任务可以向信号中心"订阅(subscribe)"
+    //这个信号，从而知道什么啥时候自己可以开始执行。“这就叫做发布/订阅模式”(puslish-subscribe pattern)
+    class EventEmitter{
+        constructor(){
+            this.subs= Object.create(null)
+        }
+        $on (eventType,handler) {
+            this.subs[eventType] = this.subs[eventType] || []
+        }
+    }
+</script>
